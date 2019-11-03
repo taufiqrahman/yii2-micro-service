@@ -1,0 +1,7 @@
+API_HOST=localhost
+APP_ENV=development
+
+MYSQL_HOST=localhost
+MYSQL_DATABASE=
+MYSQL_USER=
+MYSQL_PASSWORD=

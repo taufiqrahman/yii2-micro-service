@@ -1,0 +1,14 @@
+actor: ApiTester
+modules:
+     enabled:
+        - REST:
+            url: http://localdev.taufiq.test/yii2-microservice/web/
+            depends: PhpBrowser
+            part: Json
+        - \Helper\Api
+        - Db:
+                 dsn: 'mysql:host=mysql;dbname=yii2advanced'
+                 user: 'root'
+                 password: 'root'
+                 cleanup: true
+         

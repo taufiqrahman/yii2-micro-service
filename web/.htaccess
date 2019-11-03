@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -l [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^.*$ - [NC,L]
+
+    RewriteRule ^.*$ index.php [NC,L]
+</IfModule>
+
+# Remove `ETags` to use expire headers
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+DirectoryIndex index.php

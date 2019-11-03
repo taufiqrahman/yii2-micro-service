@@ -1,0 +1,16 @@
+{
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "codeception/codeception": "^3.0",
+        "flow/jsonpath": "^0.4.0",
+        "fzaninotto/faker": "^1.8",
+        "vlucas/phpdotenv": "^3.4"
+    },
+    "repositories": [{
+        "type": "composer",
+        "url": "https://asset-packagist.org"
+    }],
+    "require-dev": {
+        "yiisoft/yii2-gii": "^2.1"
+    }
+}
