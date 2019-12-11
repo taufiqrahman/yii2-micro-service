@@ -28,19 +28,25 @@ USAGE
 -----
 
 1. Clone this repo
-2. Edit file /console/config/main.php for DB connection
-3. Run migration
+2. Running composer install / update
+3. Edit file /console/config/main.php for DB connection
+4. Run migration
     ```
-    ./yii migration
+    ./yii migrate
     ```
-4. Create RBAC table
+5. Create RBAC table
     ```
     ./yii migrate --migrationPath=@yii/rbac/migrations/
     ```
-2. rename env-example to .env
-3. Edit .env to configure your environment
-5. Run your application
+6. rename env-example to .env
+7. Edit .env to configure your environment
+8. Run your application
 
+SAMPLE USER
+-------
+You can try this user :
+username : admin
+password : P4ssw0rd
 
 RUNNING
 -------
