@@ -43,21 +43,36 @@ USAGE
 8. Run your application
 
 SAMPLE USER
--------
+-----------
+
 You can try this user :
+```
 username : admin
 password : P4ssw0rd
+OR
+username : testuser
+password : testuserP455
+```
 
 RUNNING
 -------
+
 You can run it from the micro-app/ directory via:
 ```
 ./yii serve --docroot=./web
 
 ```
 
+SAMPLE RBAC
+-----------
+
+You can try RBAC with user login first. Then try access v1/auth-test
+Admin can access page : v1/auth-test, where testuser can't.
+
+
 CREATING MODEL WITH GII CONSOLE
 -------------------------------
+
 Because no web UI in this framework, we can use gii console. First one first edit console app in /console/config/main.php to connect to DB source. and run this command:
 
 ```
