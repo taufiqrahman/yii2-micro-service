@@ -23,7 +23,7 @@ class TestController extends Controller
 
     public function actionIndex()
     {
-        return ['status' => 'success','message' => 'Hello World!'];
+        return ['status' => 'success','message' => 'Hello World! - Test Controller'];
     }
 
     public function actionCoba($key, $lock)

@@ -20,6 +20,6 @@ class SiteController extends Controller
     }
     public function actionIndex()
     {
-        return ['status' => 'success','message' => 'Hello World!'];
+        return ['status' => 'success','message' => 'Hello Worlds! - Site Controller'];
     }
 }

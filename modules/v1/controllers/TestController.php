@@ -18,8 +18,8 @@ class TestController extends Controller
     */
     public function actionIndex()
     {
-        // return ['status'=>'success','message'=>'Hello World!','version'=>'v1'];
-        return $this->responseSuccess('Hello World!');
+        // return ['status'=>'success','message'=>'!','version'=>'v1'];
+        return $this->responseSuccess('Hello World! - Module v1 - Test Controller');
     }
 
     public function humanSize($Bytes)

@@ -7,7 +7,7 @@ return [
     'id' => 'app-console',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
-    'controllerNamespace' => 'console\controllers',
+    'controllerNamespace' => 'app\controllers',
     'components' => [
         'log' => [
             'targets' => [
