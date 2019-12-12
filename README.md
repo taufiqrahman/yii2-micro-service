@@ -32,15 +32,19 @@ USAGE
 3. Edit file /console/config/main.php for DB connection
 4. Run migration
     ```
-    ./yii migrate
+    ./yii migrate/up 1
     ```
 5. Create RBAC table
     ```
     ./yii migrate --migrationPath=@yii/rbac/migrations/
     ```
-6. rename env-example to .env
-7. Edit .env to configure your environment
-8. Run your application
+6. Run migration again
+    ```
+    ./yii migrate
+    ```
+7. rename env-example to .env
+8. Edit .env to configure your environment
+9. Run your application
 
 SAMPLE USER
 -----------
