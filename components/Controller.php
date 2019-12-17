@@ -21,6 +21,19 @@ class Controller extends \yii\rest\Controller
     }
 
     /**
+     * response Not Found
+     */
+    public function responseNotFound($errors, $message = false)
+    {
+        Yii::$app->response->statusCode = 404;
+        return [
+            'statusCode' => 404,
+            'name' => '404 Not Found',
+            'message' => $message ? $message : 'Your request not exist, please contact Admin!',
+            'errors' => $errors
+        ];
+    }
+    /**
      * response Validate error response
      */
     public function responseNotValidate($errors, $message = false)

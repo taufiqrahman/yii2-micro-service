@@ -9,6 +9,7 @@ namespace micro\components;
 
 use yii\filters\auth\HttpBearerAuth;
 use micro\components\Controller;
+use micro\components\AccessControl;
 
 class AuthController extends Controller
 {
@@ -20,6 +21,9 @@ class AuthController extends Controller
         $behaviors = parent::behaviors();
         $behaviors['authenticator'] = [
             'class' => HttpBearerAuth::className(),
+        ];
+        $behaviors['access'] = [
+            'class' => AccessControl::className(),
         ];
         return $behaviors;
     }

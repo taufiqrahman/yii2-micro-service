@@ -16,22 +16,24 @@ return [
             'class' => 'micro\modules\v1\Module',
         ],
     ],
-    'as access' => [
-        'class' => 'micro\components\AccessControl',
-        'allowActions' => [
-            'site/*',
-            'test/*',
-            'v1/user/login',
-            'v1/test/*',
-        ]
-    ],
+    // 'as access' => [
+    //     'class' => 'micro\components\AccessControl',
+    //     'allowActions' => [
+    //         'site/*',
+    //         'test/*',
+    //         'v1/user/login',
+    //         'v1/test/*',
+    //     ]
+    // ],
     'components' => [
         'user' => [
             'identityClass' => 'micro\models\User',
             'enableAutoLogin' => false,
+            'enableSession' => false,
+            'loginUrl' => null,
         ],
         'authManager' => [
-            'class' => 'yii\rbac\DbManager', 
+            'class' => 'yii\rbac\DbManager',
         ],
         'db' => [
             'class' => 'yii\db\Connection',
@@ -65,16 +67,17 @@ return [
                 ],
             ],
         ],
-        // gunakan dengan domain
-        'urlManager' => [
-            'class' => 'yii\web\UrlManager',
-            'enablePrettyUrl' => true,
-            //'enableStrictParsing' => true,
-            'showScriptName' => false,
+        'errorHandler' => [
+            'errorAction' => 'site/error',
         ],
-        // 'errorHandler' => [
-        //     'errorAction' => 'site/error',
+        // gunakan dengan domain
+        // 'urlManager' => [
+        //     'class' => 'yii\web\UrlManager',
+        //     'enablePrettyUrl' => true,
+        //     //'enableStrictParsing' => true,
+        //     'showScriptName' => false,
         // ],
+      
 
     ]
 
